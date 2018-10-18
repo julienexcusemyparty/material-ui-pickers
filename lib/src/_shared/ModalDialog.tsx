@@ -1,6 +1,7 @@
 import { Omit, WithStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import Dialog, { DialogProps } from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import withStyles from '@material-ui/core/styles/withStyles';
@@ -85,6 +86,8 @@ export const ModalDialog: React.SFC<
     classes={{ paper: classes.dialogRoot }}
     {...other}
   >
+    <DialogTitle>On se voit quand ? 📅</DialogTitle>
+
     <EventListener target="window" onKeyDown={onKeyDown} />
 
     <DialogContent
